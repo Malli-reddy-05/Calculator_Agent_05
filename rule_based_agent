@@ -1,0 +1,24 @@
+def rule_based_agent(operation, num1, num2):
+    if operation == "add":
+        return num1 + num2
+
+    elif operation == "subtract":
+        return num1 - num2
+
+    elif operation == "multiply":
+        return num1 * num2
+
+    elif operation == "divide":
+        if num2 == 0:
+            return "Error: Cannot divide by zero"
+        return num1 / num2
+
+    else:
+        return "Invalid operation"
+
+
+# Test the rule-based agent
+print("Addition:", rule_based_agent("add", 10, 5))
+print("Subtraction:", rule_based_agent("subtract", 10, 5))
+print("Multiplication:", rule_based_agent("multiply", 10, 5))
+print("Division:", rule_based_agent("divide", 10, 5))
